@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: #0a043c;
+  height: 40px;
+}
+
+.title {
+  margin: 5px;
+  display: inline-block;
+  color: aliceblue;
+}
