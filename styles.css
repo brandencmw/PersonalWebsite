@@ -1,14 +1,51 @@
-body {
+* {
   margin: 0;
 }
 
 nav {
-  background-color: #0a043c;
-  height: 40px;
+  align-items: center;
+  background-image: linear-gradient(to right, #121317, #323b42);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+}
+.title {
+  color: #ebeced;
+  font-size: 22pt;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding-left: 10px;
 }
 
-.title {
-  margin: 5px;
-  display: inline-block;
-  color: aliceblue;
+.navigation-links {
+  display: flex;
+  width: 380px;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.navigation-links a {
+  font-family: "Ubuntu", sans-serif;
+  border-bottom: transparent solid 3px;
+  padding-bottom: 1px;
+  font-size: 16pt;
+  color: #ebeced;
+  text-decoration: none;
+}
+
+hr {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  height: 2px;
+  margin: 0;
+}
+
+.navigation-links a:hover {
+  transition: 0.3s;
+  border-bottom: #ebeced solid 3px;
+}
+
+.content {
+  background-color: #4c586f;
+  height: 100px;
 }
