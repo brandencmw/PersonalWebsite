@@ -6,13 +6,14 @@ nav {
   align-items: center;
   background-image: linear-gradient(to right, #121317, #323b42);
   display: flex;
-  height: 60px;
+  height: 50px;
   justify-content: space-between;
+  border-bottom: 5px dashed black;
 }
 .title {
   color: #ebeced;
   font-size: 22pt;
-  font-family: "Ubuntu", sans-serif;
+  font-family: monospace;
   margin: 0;
   padding-left: 10px;
 }
@@ -25,7 +26,7 @@ nav {
 }
 
 .navigation-links a {
-  font-family: "Ubuntu", sans-serif;
+  font-family: monospace;
   border-bottom: transparent solid 3px;
   padding-bottom: 1px;
   font-size: 16pt;
@@ -45,7 +46,68 @@ hr {
   border-bottom: #ebeced solid 3px;
 }
 
-.content {
-  background-color: #4c586f;
-  height: 100px;
+.intro-container {
+  background-image: url("images/intro-background.jpg");
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-box {
+  height: 310px;
+  width: 65%;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 25px;
+}
+
+.img-branden {
+  border-radius: 100%;
+  border: 5px dotted gainsboro;
+  height: 280px;
+  float: left;
+  margin: 10px;
+  shape-outside: circle();
+}
+
+.summary-box p {
+  color: white;
+  font-size: 18pt;
+  font-family: monospace;
+  padding-top: 10px;
+}
+
+.name {
+  color: aqua;
+}
+
+.summary-box p a {
+  text-decoration: none;
+  transition: color 0.5s;
+  color: aqua;
+}
+
+.summary-box p a:hover {
+  transition: 0.5s;
+  color: orange;
+  text-decoration: underline;
+}
+
+.languages-container {
+  background-color: gold;
+  height: 400px;
+}
+
+.languages-container h1 {
+  padding-top: 10px;
+  font-family: monospace;
+  font-size: 30pt;
+  text-align: center;
+}
+
+.language-icon-container {
+  background-color: black;
+  height: 300px;
+  margin-top: 20px;
 }
