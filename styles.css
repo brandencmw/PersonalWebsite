@@ -2,14 +2,6 @@
   margin: 0;
 }
 
-nav {
-  align-items: center;
-  background-image: linear-gradient(to right, #121317, #323b42);
-  display: flex;
-  height: 50px;
-  justify-content: space-between;
-  border-bottom: 5px dashed black;
-}
 .title {
   color: #ebeced;
   font-size: 22pt;
@@ -18,54 +10,32 @@ nav {
   padding-left: 10px;
 }
 
-.navigation-links {
-  display: flex;
-  width: 380px;
-  justify-content: space-evenly;
-  list-style-type: none;
-}
-
-.navigation-links a {
-  font-family: monospace;
-  border-bottom: transparent solid 3px;
-  padding-bottom: 1px;
-  font-size: 16pt;
-  color: #ebeced;
-  text-decoration: none;
-}
-
-hr {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  height: 2px;
-  margin: 0;
-}
-
-.navigation-links a:hover {
-  transition: 0.3s;
-  border-bottom: #ebeced solid 3px;
+.nav-item {
+  padding: 0 18px;
 }
 
 .intro-container {
   background-image: url("images/intro-background.jpg");
-  height: 500px;
   display: flex;
   justify-content: center;
+  width: 100%;
   align-items: center;
 }
 
 .summary-box {
-  height: 310px;
   width: 65%;
+  height: auto;
   background-color: black;
   border: 5px solid white;
   border-radius: 25px;
+  margin: 85px 0;
 }
 
 .img-branden {
   border-radius: 100%;
-  border: 5px dotted gainsboro;
-  height: 280px;
+  border: 5px dashed gainsboro;
+  width: 40%;
+  height: auto;
   float: left;
   margin: 10px;
   shape-outside: circle();
@@ -73,8 +43,8 @@ hr {
 
 .summary-box p {
   color: white;
-  font-size: 18pt;
   font-family: monospace;
+  font-size: 16pt;
   padding-top: 10px;
 }
 
@@ -97,17 +67,29 @@ hr {
 .languages-container {
   background-color: gold;
   height: 400px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 .languages-container h1 {
   padding-top: 10px;
   font-family: monospace;
   font-size: 30pt;
-  text-align: center;
 }
 
-.language-icon-container {
-  background-color: black;
+.language-carousel {
   height: 300px;
-  margin-top: 20px;
+  width: 100%;
+  background-color: black;
+}
+
+.language-logo {
+  margin: 70px 0 40px;
+  height: 120px;
+}
+
+.carousel-caption {
+  position: relative;
+  left: 0;
+  top: 10;
 }
