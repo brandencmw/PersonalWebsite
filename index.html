@@ -8,6 +8,7 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <title>Branden Wheeler</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
@@ -46,14 +47,18 @@
         </p>
       </div>
     </div>
-    <div class="languages-container">
-      <h1>My Languages</h1>
+    <div class="languages-container js-style">
+      <h1>My Languages (So far...)</h1>
       <div class="language-carousel">
         <div id="carouselLanguages" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
           <ol class="carousel-indicators">
-            <li data-bs-target="#carouselLanguages" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselLanguages" data-bs-slide-to="0" class="active"><img class="slider-img" src="images/js-logo.png"></li>
             <li data-bs-target="#carouselLanguages" data-bs-slide-to="1"></li>
             <li data-bs-target="#carouselLanguages" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselLanguages" data-bs-slide-to="3"></li>
+            <li data-bs-target="#carouselLanguages" data-bs-slide-to="4"></li>
+            <li data-bs-target="#carouselLanguages" data-bs-slide-to="5"></li>
+            <li data-bs-target="#carouselLanguages" data-bs-slide-to="6"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -74,6 +79,30 @@
                 <h5 class="language-title">CSS 3</h5>
               </div>
             </div>
+            <div class="carousel-item">
+              <img class="language-logo" src="images/python-logo.png" alt="Python logo">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="language-title">Python</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="language-logo" src="images/java-logo.png" alt="Java logo">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="language-title">Java</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="language-logo" src="images/vba-logo.png" alt="VBA logo">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="language-title">VBA</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="language-logo" src="images/sql-logo.png" alt="mySQL logo">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="language-title">SQL</h5>
+              </div>
+            </div>
           </div>
           <a class="carousel-control-prev" href="#carouselLanguages" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -86,5 +115,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -65,7 +65,6 @@
 }
 
 .languages-container {
-  background-color: gold;
   height: 400px;
   padding-bottom: 50px;
   text-align: center;
@@ -73,8 +72,58 @@
 
 .languages-container h1 {
   padding-top: 10px;
-  font-family: monospace;
-  font-size: 30pt;
+}
+
+.js-style {
+  transition: 1s;
+  background-color: #f7e018;
+}
+
+.js-style h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.html-style {
+  transition: 1s;
+  background-color: #e34f26;
+}
+
+.html-style h1 {
+  transition: 1s;
+  color: white;
+  font-family: "Montserrat";
+}
+
+.css-style {
+  transition: 1s;
+  background-color: #0277bd;
+}
+
+.css-style h1 {
+  transition: 1s;
+  color: white;
+  font-family: "Montserrat";
+}
+
+.python-style {
+  transition: 1s;
+  background-color: #ffde4d;
+}
+
+.java-style {
+  transition: 1s;
+  background-color: #db380e;
+}
+
+.vba-style {
+  transition: 1s;
+  background-color: #952781;
+}
+
+.sql-style {
+  transition: 1s;
+  background-color: #ce8b2c;
 }
 
 .language-carousel {
@@ -84,8 +133,15 @@
 }
 
 .language-logo {
-  margin: 70px 0 40px;
-  height: 120px;
+  margin: 60px 0 40px;
+  height: 140px;
+}
+
+.slider-img {
+  height: 100px;
+  width: auto;
+  position: absolute;
+  bottom: 100px;
 }
 
 .carousel-caption {
