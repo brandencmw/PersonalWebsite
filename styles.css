@@ -1,9 +1,34 @@
 * {
   margin: 0;
 }
-
 .nav-item {
-  padding: 0 18px;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: gold;
+  width: 0%;
 }
 
 .intro-container {
@@ -21,16 +46,18 @@
   background-color: black;
   border: 5px solid white;
   border-radius: 25px;
+  padding: 10px;
   margin: 85px 0;
 }
 
 .img-branden {
   border-radius: 100%;
   border: 5px dashed gainsboro;
+  max-width: 20%;
   width: 40%;
+  margin-right: 10px;
   height: auto;
   float: left;
-  margin: 10px;
   shape-outside: circle();
 }
 
@@ -38,11 +65,11 @@
   color: white;
   font-family: monospace;
   font-size: 16pt;
-  padding-top: 10px;
+  margin-left: 5px;
 }
 
 .name {
-  color: aqua;
+  color: greenyellow;
 }
 
 .summary-box p a {
@@ -207,4 +234,59 @@
 .software-section {
   background-color: #434240;
   width: 98%;
+}
+
+.socials-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.socials-bar {
+  padding-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-link {
+  transition: 0.3s;
+  z-index: 1;
+  margin: 10px;
+  padding: 10px 10px 0;
+  border: 5px solid transparent;
+  text-decoration: none;
+  color: black;
+}
+
+.social-img {
+  height: 100px;
+  width: auto;
+}
+
+.social-link:hover {
+  transition: 0.3s;
+  border: 5px solid white;
+  font-weight: bold;
+  color: black;
+}
+
+.finance-screenshot {
+  width: 400px;
+  height: auto;
+  border: 5px solid black;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.screen-section {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.screen-section-desc {
+  display: flex;
+  flex-direction: column;
 }

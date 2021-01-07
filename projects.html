@@ -1,1 +1,207 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Projects</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/brand.ico" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="">Branden Wheeler</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="main-link nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="project-link nav-link"
+              >My Projects</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1>My Projects</h1>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Yahoo Finance Database
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <h2>Intro</h2>
+            <p>
+              I started this project at the beginning of my first semester of my
+              second year of university. This was my first ever attempt at
+              completing a project that wasn't directed at school work. In the
+              completion of this project I learned a lot about managing a
+              software project through github, CRUD operations within databases,
+              and event driven programming which was a programming style I had
+              never attempted in the past. I started out programming this
+              project in an imperative way but realized over time it was much
+              easier to program it in more of an object-oriented fashion. I
+              consider this project finished since it accomplishes what I had
+              set out to do but there are definitely some things I would change
+              if I were to try this again.
+            </p>
+            <hr>
+            <h2>Technical Background</h2>
+            <p>This project was coded entirely with Python 3 but it required several external packages to make it do what I needed it to do.
+              <ul>
+                <li>Tkinter</li>
+                <ul>
+                  <li>This is the package that was used to design the graphical user interface and program functionality for the buttons</li>
+                </ul>
+                <li>Beautiful Soup 4</li>
+                <ul>
+                  <li>This package allowed me to grab the HTML from the relevant page and parse through it to pull out the financial statement information</li>
+                </ul>
+                <li>Selenium</li>
+                <ul>
+                  <li>I used Selenium's Chrome driver as that was the main browser I was using at the time</li>
+                </ul>
+                <li>MySQL Connector</li>
+                <ul>
+                  <li>This package was used to create and execute SQL queries on the database that contained the financial statement information for each company</li>
+                  <li>The database contains one table for each company that is added</li>
+                </ul>
+                <li>CSV Package</li>
+                <ul>
+                  <li>This package allows the program to export the data within the database to a csv file in order to be represented in Excel</li>
+                </ul>
+              </ul>
+            </p>
+            <hr>
+            <div class="screen-section">
+              <img
+                class="finance-screenshot" style="float: left;"
+                src="images/project-screenshots/finance-database/main-screen.png"
+                alt="Finance Database Main Screen"
+              />
+              <div class="screen-section-desc">
+                <h2>Main Screen</h2>
+                <p>This the first screen that would be shown on any run of the program. I kept the design very simple with nothing but five buttons and a title. If I were to complete this project again I would put some more time into the design to make it more visually appealing and I would probably add a menu bar along the top with keyboard shortcuts for quick access to each function</p>
+              </div>
+            </div>
+            <div class="screen-section" style="flex-direction: row-reverse;">
+              <img
+                class="finance-screenshot"
+                src="images/project-screenshots/finance-database/add-screen.png"
+                alt="Finance Database Add Screen"
+              />
+              <div class="screen-section-desc">
+                <h2>Add Screen</h2>
+                <p>This is the screen that will open if you press the "Add Company" button on the main screen. Again, it has a very simple design with a title, a brief instruction to the user, and two buttons. The user can enter the stock symbol of a company and press the add button to the right of the input box. If the info for that company already exists in the database, a pop-up window appears that allows the user to select to overwrite their existing data or cancel. If the operation is allowed to continue, Selenium web driver opens the Chrome browser, navigates to the specified page and pulls the financial statement information for the company and files it in the database. If the company cannot be found, a pop-up box will appear, prompting the user to try again. On clicking the "Return to main" button, the user will return to the main menu. If I were to do this project again, I would use the requests package as opposed to a combination of the Selenium and BeautifulSoup packages to simplify the process.</p>
+              </div>
+            </div>
+            <div class="screen-section">
+              <img
+                class="finance-screenshot"
+                src="images/project-screenshots/finance-database/delete-screen.png"
+                alt="Finance Database Delete Screen"
+              />
+              <div class="screen-section-desc">
+                <h2>Delete Screen</h2>
+                <p>This is the screen that will open if you press the "Delete Company" button on the main screen. It's design is identical to that of the Add screen with a title, brief instruction, and two buttons. The user can enter the stock symbol of a company that they no longer want the data for in their database. If a table with that name does not exist within the database, a pop-up window appears to tell the user their input was invalid. If the operation is allowed to continue, the table is simply dropped from the database and is unretrievable. On clicking the "Return to main" button, the user will return to the main menu.</p>
+              </div>
+            </div>
+          <div class="row" style="margin: 30px 0;">
+            <h2>Display Screen</h2>
+            <div class="col-lg-4 col-md-12">
+              <img
+                class="finance-screenshot"
+                src="images/project-screenshots/finance-database/display-screen-1.png"
+                alt="Finance Database Display Screen 1"
+              />
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <img
+                class="finance-screenshot"
+                src="images/project-screenshots/finance-database/display-screen-2.png"
+                alt="Finance Database Display Screen 2"
+              />
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <img
+                class="finance-screenshot"
+                src="images/project-screenshots/finance-database/display-screen-3.png"
+                alt="Finance Database Display Screen 3"
+              />
+            </div>
+            <p>This is the screen that appears when the user selects the "Display Database" button on the main screen. The screen has two headers, one for the company and one for the type of statement, toggle buttons for each, a table, and two other buttons. By clicking the right and left arrow buttons beside the company symbol header, the user can page through all of the companies that they have in their database. By clicking the left and right arrow buttons beside the statement title the user can page through the three financial statements pulled by the program as shown in the images above. The table is made up of a 2d array of Label elements within the Tkinter package. I could have introduced another package like Pandas and embedded one of their dataframes, but I had no desire to introduce any more packages than I already had. The user can export each table to Excel by pressing the button in the top left which creates a new Excel file, fills in the info from the table, and saves it into a folder in the same location as the program. On pressing the "Return to main" button, the user is sent back to the main menu.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Personal Website (The one you're on)
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
