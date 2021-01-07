@@ -9,17 +9,18 @@
       crossorigin="anonymous"
     />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="images/brand.ico">
     <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Varta:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
     <title>Branden Wheeler</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
 </head>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar py-0 navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="">Branden Wheeler</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,10 +29,14 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a href="index.html" class="main-link nav-link">Home</a></li>
           <li class="nav-item"><a href="projects.html" class="project-link nav-link">My Projects</a></li>
-          <li class="nav-item"><a href="contact.html" class="contact-link nav-link">Contact Me</a></li>
         </ul>
       </div>
     </nav>
+    <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
     <div class="intro-container">
       <div class="summary-box">
         <img
@@ -57,7 +62,7 @@
       <div class="language-carousel">
         <div id="carouselLanguages" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
           <ol class="carousel-indicators">
-            <li data-bs-target="#carouselLanguages" data-bs-slide-to="0" class="active"><img class="slider-img" src="images/js-logo.png"></li>
+            <li data-bs-target="#carouselLanguages" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#carouselLanguages" data-bs-slide-to="1"></li>
             <li data-bs-target="#carouselLanguages" data-bs-slide-to="2"></li>
             <li data-bs-target="#carouselLanguages" data-bs-slide-to="3"></li>
@@ -67,43 +72,43 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="language-logo" src="images/js-logo.png" alt="JavaScript logo">
+              <img class="language-logo" src="images/logos/js-logo.png" alt="JavaScript logo">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="language-title">JavaScript</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="language-logo" src="images/html-logo.png" alt="HTML logo">
+              <img class="language-logo" src="images/logos/html-logo.png" alt="HTML logo">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="language-title">HTML 5</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="language-logo" src="images/css-logo.png" alt="CSS logo">
+              <img class="language-logo" src="images/logos/css-logo.png" alt="CSS logo">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="language-title">CSS 3</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="language-logo" src="images/python-logo.png" alt="Python logo">
+              <img class="language-logo" src="images/logos/python-logo.png" alt="Python logo">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="language-title">Python</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="language-logo" src="images/java-logo.png" alt="Java logo">
+              <img class="language-logo" src="images/logos/java-logo.png" alt="Java logo">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="language-title">Java</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="language-logo" src="images/vba-logo.png" alt="VBA logo">
+              <img class="language-logo" src="images/logos/vba-logo.png" alt="VBA logo">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="language-title">VBA</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="language-logo" src="images/sql-logo.png" alt="mySQL logo">
+              <img class="language-logo" src="images/logos/sql-logo.png" alt="mySQL logo">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="language-title">SQL</h5>
               </div>
@@ -126,52 +131,80 @@
       <div class="row ide-section">
         <h3>IDEs / Editors</h3>
         <div class="col-lg-4 col-sm-12 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/vscode-logo.png" alt="VSCode Logo" data-bs-toggle="tooltip" data-bs-placement="bottom"></a>
+          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/logos/vscode-logo.png" alt="VSCode Logo"></a>
           <h4>VS Code</h4>
         </div>
         <div class="col-lg-4 col-sm-12 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/eclipse-logo.png" alt="Eclipse Logo"></a>
+          <a href="https://www.eclipse.org/ide/"><img class="ide-img" src="images/logos/eclipse-logo.png" alt="Eclipse Logo"></a>
           <h4>Eclipse</h4>
         </div>
         <div class="col-lg-4 col-sm-12 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/atom-logo.png" alt="Atom Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+          <a href="https://atom.io/"><img class="ide-img" src="images/logos/atom-logo.png" alt="Atom Logo"></a>
           <h4>Atom</h4>
         </div>
       </div>
       <div class="row tools-section">
         <h3>Tools and Packages</h3>
         <div class="col-lg-3 col-sm-6 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/powerapps-logo.png" alt="Powerapps Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+          <a href="https://powerapps.microsoft.com/en-us/"><img class="ide-img" src="images/logos/powerapps-logo.png" alt="Powerapps Logo"></a>
           <h4>Microsoft PowerApps</h4>
         </div>
         <div class="col-lg-3 col-sm-6 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/flows-logo.png" alt="Atom Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+          <a href="https://flow.microsoft.com/en-us/"><img class="ide-img" src="images/logos/flows-logo.png" alt="Flows Logo"></a>
           <h4>Microsoft Flows</h4>
         </div>
         <div class="col-lg-3 col-sm-6 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/bootstrap-logo.png" alt="Atom Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+          <a href="https://getbootstrap.com/"><img class="ide-img" src="images/logos/bootstrap-logo.png" alt="Bootstrap Logo"></a>
           <h4>Bootstrap</h4>
         </div>
         <div class="col-lg-3 col-sm-6 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/selenium-logo.png" alt="Atom Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+          <a href="https://www.selenium.dev/"><img class="ide-img" src="images/logos/selenium-logo.png" alt="Selenium Logo"></a>
           <h4>Selenium Web Driver</h4>
         </div>
       </div>
       <div class="row software-section">
         <h3>Other Software I Use</h3>
-        <div class="col-lg-4 col-sm-12 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/slack-logo.png" alt="Powerapps Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+        <div class="col-lg-3 col-sm-6 ide-box">
+          <a href="https://slack.com/intl/en-ca/"><img class="ide-img" src="images/logos/slack-logo.png" alt="Slack Logo"></a>
           <h4>Slack</h4>
         </div>
-        <div class="col-lg-4 col-sm-12 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/discord-logo.png" alt="Powerapps Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+        <div class="col-lg-3 col-sm-6 ide-box">
+          <a href="https://discord.com/"><img class="ide-img" src="images/logos/discord-logo.png" alt="Discord Logo"></a>
           <h4>Discord</h4>
         </div>
-        <div class="col-lg-4 col-sm-12 ide-box">
-          <a href="https://code.visualstudio.com/"><img class="ide-img" src="images/spotify-logo.png" alt="Powerapps Logo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Atom"></a>
+        <div class="col-lg-3 col-sm-6 ide-box">
+          <a href="https://www.spotify.com/ca-en/"><img class="ide-img" src="images/logos/spotify-logo.png" alt="Spotify Logo"></a>
           <h4>Spotify</h4>
         </div>
+        <div class="col-lg-3 col-sm-6 ide-box">
+          <a href="https://git-scm.com/"><img class="ide-img" src="images/logos/git-logo.png" alt="Git Logo"></a>
+          <h4>Git</h4>
+        </div>
       </div>
+    </div>
+    <div class="socials-container js-style">
+      <h1>You can find me here...</h1>
+      <div class="socials-bar js-style">
+        <a class="social-link" href="https://www.linkedin.com/in/brandenwheeler/">
+          <img class="social-img" src="images/logos/linkedin-logo.png"/>
+          <p>LinkedIn</p>
+        </a>
+        <a class="social-link" href="https://www.facebook.com/branden.wheeler.714">
+          <img class="social-img" src="images/logos/facebook-logo.png"/>
+          <p>Facebook</p>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/brandencmw/">
+          <img class="social-img" src="images/logos/instagram-logo.png"/>
+          <p>Instagram</p>
+        </a>
+        <a class="social-link" href="https://github.com/brandencmw">
+          <img class="social-img" src="images/logos/github-logo.png"/>
+          <p>GitHub</p>
+        </a>
+        <a class="social-link" href="mailto:branden.wheeler17@gmail.com">
+          <img class="social-img" src="images/logos/mail-icon.png"/>
+          <p>GMail</p>
+        </a>
     </div>
   </body>
 </html>
